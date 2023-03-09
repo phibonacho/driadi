@@ -1,0 +1,29 @@
+{
+  "compilerOptions": {
+    // Default
+    "target": "es6",
+    "lib": ["ES5", "ES6", "DOM"],
+    "strict": true,
+    "skipLibCheck": true,
+    "moduleResolution": "node",
+    "module": "CommonJS",
+    "sourceMap": true,
+    "declaration": true,
+    "declarationDir": "es/types",
+    "declarationMap": true,
+    "emitDeclarationOnly": true,
+    "outDir": "es",
+    "forceConsistentCasingInFileNames": true,
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": false,
+    "baseUrl": "./",
+  },
+  "include": [
+    "src/**.ts",
+    "test/**.spec.ts"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
+
+}
