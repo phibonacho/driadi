@@ -2,9 +2,11 @@
   "name": "driadi",
   "version": "1.0.0",
   "description": "Morse decoder based on Huffman coding",
+  "homepage": "https://github.com/rollingflamingo/driadi",
   "main": "dist/index.cjs.js",
   "module": "dist/index.es.js",
   "types": "dist/index.d.ts",
+  "files": ["/dist", "README.md", "LICENSE.md"],
   "scripts": {
     "test": "mocha",
     "build": "rollup --config rollup.config.ts --configPlugin typescript"
