@@ -5,7 +5,7 @@ name: Node.js Package
 
 on:
   release:
-    types: [created]
+    types: [ created ]
 
 jobs:
   build:
@@ -30,6 +30,7 @@ jobs:
         with:
           node-version: 16
           registry-url: https://npm.pkg.github.com/
+          always-auth: true
       - run: yarn
       - run: yarn publish
         env:

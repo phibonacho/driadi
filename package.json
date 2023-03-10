@@ -1,6 +1,6 @@
 {
   "name": "driadi",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "Morse decoder based on Huffman coding",
   "repository": {
     "type": "git",
@@ -52,6 +52,7 @@
     ".": {
       "types": "./dist/index.d.ts",
       "node": "./dist/index.cjs.js",
+      "browser": "./dist/index.cjs.js",
       "require": "./dist/index.cjs.js",
       "default": "./dist/index.esm.js"
     }
