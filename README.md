@@ -15,4 +15,5 @@ console.log(encoded, dedcoded);
 ```
 
 ## Notes
-Encoding algorithm is case-insensitive.
+- It is possible to encode/decode only alphanumeric signs (no punctuation).
+- Encoding algorithm is case-insensitive.
