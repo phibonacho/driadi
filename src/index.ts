@@ -1,5 +1,5 @@
 import MorseTree from "./morse";
 
-const morse = new MorseTree();
+const morse = /*! @__PURE__*/ new MorseTree();
 
 export default morse;

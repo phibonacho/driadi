@@ -7,15 +7,15 @@ export default [{
     input: "src/index.ts",
     output: [
         {
-            file: "./dist/index.cjs.js",
+            file: "./dist.old/index.cjs.js",
             format: "cjs",
         },
         {
-            file: "./dist/index.es.js",
+            file: "./dist.old/index.es.js",
             format: "es",
         },
         {
-            file: "./dist/index.umd.js",
+            file: "./dist.old/index.umd.js",
             format: "umd",
             name: "morse"
         }
@@ -28,7 +28,7 @@ export default [{
         terser()
     ]
 }, {
-    input: "./dist/es/types/index.d.ts",
-    output: [{file: "dist/index.d.ts", format: "es"}],
+    input: "./dist.old/es/types/index.d.ts",
+    output: [{file: "dist.old/index.d.ts", format: "es"}],
     plugins: [dts()],
 }];

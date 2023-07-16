@@ -199,7 +199,3 @@ export default class Tree<T = string> implements ITree<T> {
         return Math.max(siblingDegree, degree);
     }
 }
-
-export namespace cli {
-
-}
