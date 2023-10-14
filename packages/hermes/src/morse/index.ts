@@ -44,67 +44,68 @@ L3 2 -
 type DotDash = "." | "-";
 
 export interface IMorseTree {
-  decode: (s: string) => string;
-  encode: (s: string) => string;
+	decode: (s: string) => string;
+	encode: (s: string) => string;
 }
 
 export default class MorseTree extends Tree<DotDash> implements IMorseTree {
-  constructor() {
-    super();
-    this.load(morseTreeConfig);
-  }
+	constructor() {
+		super();
+		this.load(morseTreeConfig);
+	}
 
-  decode(s: string) {
-    const words = s.split("_");
-    return words.map((word) => this.decodeWord(word)).join(" ");
-  }
+	decode(s: string) {
+		const words = s.split("_");
+		return words.map((word) => this.decodeWord(word)).join(" ");
+	}
 
-  encode(s: string): string {
-    const words = s.split(" ");
-    return words.map((word) => this.encodeWord(word)).join("_");
-  }
+	encode(s: string): string {
+		const words = s.split(" ");
+		return words.map((word) => this.encodeWord(word)).join("_");
+	}
 
-  private encodeWord(w: string): string {
-    const chars = w.split("");
+	private encodeWord(w: string): string {
+		const chars = w.split("");
 
-    return chars.map((char) => this.encodeChar(char)).join(" ");
-  }
+		return chars.map((char) => this.encodeChar(char)).join(" ");
+	}
 
-  private encodeChar(c: string): string {
-    const encodeNode = this.search(c.toUpperCase());
+	private encodeChar(c: string): string {
+		const encodeNode = this.search(c.toUpperCase());
 
-    if (!encodeNode) return "?";
+		if (!encodeNode) return "?";
 
-    return (
-      encodeNode
-        .toRoot()
-        .map(({ payload }) => payload)
-        .reverse()
-        .join("") + encodeNode.payload
-    );
-  }
+		return (
+			encodeNode
+				.toRoot()
+				.map(({ payload }) => payload)
+				.reverse()
+				.join("") + encodeNode.payload
+		);
+	}
 
-  private decodeWord(s: string) {
-    return s
-      .split(" ")
-      .map((char) => this.decodeChar(char.split(""), this.root))
-      .join("");
-  }
+	private decodeWord(s: string) {
+		return s
+			.split(" ")
+			.map((char) => this.decodeChar(char.split(""), this.root))
+			.join("");
+	}
 
-  private decodeChar(path: string[], current: INode<string>): string {
-    if (!path.length) return current.label.match(/L\d+/) ? "?" : current.label;
+	private decodeChar(path: string[], current: INode<string>): string {
+		if (!path.length)
+			return current.label.match(/L\d+/) ? "?" : current.label;
 
-    const { child } = current;
+		const { child } = current;
 
-    if (child) {
-      const { sibling } = child;
+		if (child) {
+			const { sibling } = child;
 
-      if (sibling && sibling.payload === path[0])
-        return this.decodeChar(path.slice(1), sibling);
-      else if (child.payload === path[0])
-        return this.decodeChar(path.slice(1), child);
-    }
+			if (sibling && sibling.payload === path[0])
+				return this.decodeChar(path.slice(1), sibling);
+			else if (child.payload === path[0])
+				return this.decodeChar(path.slice(1), child);
+		}
 
-    return "?";
-  }
+		return "?";
+	}
 }
