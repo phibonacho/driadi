@@ -1,7 +1,7 @@
 {
   "name": "driadi",
   "version": "1.1.1",
-  "description": "Morse decoder based on Huffman coding",
+  "description": "A very simple Tree data type implementation",
   "repository": {
     "type": "git",
     "url": "https://github.com/rollingflamingo/driadi"
@@ -21,9 +21,7 @@
     "build": "tsup"
   },
   "keywords": [
-    "huffman",
-    "morse",
-    "coding"
+    "tree"
   ],
   "author": {
     "name": "Andrea Storace",

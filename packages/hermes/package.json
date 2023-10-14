@@ -1,8 +1,21 @@
 {
   "name": "hermes",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "Morse decoder based on Huffman coding",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rollingflamingo/driadi"
+  },
+  "homepage": "https://github.com/rollingflamingo/driadi",
+  "main": "dist/index.js",
+  "browser": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "files": [
+    "/dist",
+    "README.md",
+    "LICENSE.md"
+  ],
   "scripts": {
     "test": "mocha",
     "build": "tsup"
@@ -25,7 +38,21 @@
     "tsup": "^7.1.0",
     "typescript": "^4.9.5"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC"
+  "keywords": ["morse", "huffman", "decoder", "encoder"],
+  "author": {
+    "name": "Andrea Storace",
+    "email": "info@andreastorace.it",
+    "url": "https://andreastorace.it"
+  },
+  "funding": "https://ko-fi.com/phibonachos",
+  "license": "ISC",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "node": "./dist/index.js",
+      "browser": "./dist/index.js",
+      "require": "./dist/index.js",
+      "default": "./dist/index.mjs"
+    }
+  }
 }
