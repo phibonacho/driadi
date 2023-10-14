@@ -51,11 +51,7 @@ export interface IMorseTree {
 export default class MorseTree extends Tree<DotDash> implements IMorseTree {
   constructor() {
     super();
-
-
-
-
-this.load(morseTreeConfig)
+    this.load(morseTreeConfig);
   }
 
   decode(s: string) {
