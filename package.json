@@ -41,6 +41,6 @@
     "lint-staged": "^14.0.1"
   },
   "lint-staged": {
-    "**/*": "prettier --write --ignore-unknown"
+    "packages/**/src": ["eslint --fix", "prettier --write --ignore-unknown"]
   }
 }
