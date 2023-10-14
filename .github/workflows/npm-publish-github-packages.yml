@@ -5,7 +5,7 @@ name: Github Package
 
 on:
   release:
-    types: [ created ]
+    types: [created]
 
 jobs:
   build:
@@ -30,7 +30,7 @@ jobs:
         with:
           node-version: 16
           registry-url: https://npm.pkg.github.com/
-          scope: '@rollingflamingo'
+          scope: "@rollingflamingo"
       - run: npm ci
       - run: npm publish
         env:
