@@ -1,12 +1,12 @@
 {
   "name": "driadi",
-  "version": "1.1.1",
+  "version": "1.0.0",
   "description": "A very simple Tree data structure implementation",
   "repository": {
     "type": "git",
-    "url": "https://github.com/rollingflamingo/driadi"
+    "url": "https://github.com/rollingflamingo/driadi/tree/main/packages/driadi"
   },
-  "homepage": "https://github.com/rollingflamingo/driadi",
+  "homepage": "https://github.com/rollingflamingo/driadi/tree/main/packages/driadi",
   "main": "dist/index.js",
   "browser": "dist/index.js",
   "module": "dist/index.mjs",
