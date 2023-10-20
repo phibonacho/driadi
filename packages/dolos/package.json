@@ -1,12 +1,12 @@
 {
-	"name": "hermes",
+	"name": "dolos",
 	"version": "1.0.0",
 	"description": "Morse decoder based on Huffman coding",
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/rollingflamingo/driadi/tree/main/packages/hermes"
+		"url": "https://github.com/rollingflamingo/driadi/tree/main/packages/dolos"
 	},
-	"homepage": "https://github.com/rollingflamingo/driadi/tree/main/packages/hermes",
+	"homepage": "https://github.com/rollingflamingo/driadi/tree/main/packages/dolos",
 	"main": "dist/index.js",
 	"browser": "dist/index.js",
 	"module": "dist/index.mjs",

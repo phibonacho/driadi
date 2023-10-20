@@ -1,6 +1,6 @@
-# Driadi
+# Danae
 
-Driadi is a small library that implements [The tree data structure](https://en.wikipedia.org/wiki/Tree_(data_structure))
+Danae is a small library that implements [The tree data structure](https://en.wikipedia.org/wiki/Tree_(data_structure))
 
 ## Usage
 ### Initialization
