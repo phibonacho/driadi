@@ -1,21 +1,79 @@
-# Morse
+# Driadi
 
-Morse is a small js library to decode and encode messages in [morse code](https://en.wikipedia.org/wiki/Morse_code). It's freely inspired on [Huffman coding](https://en.wikipedia.org/wiki/Huffman_coding) binary tree to encode and decode dot/dash strings. This tree is actually hard coded and permit to decode a morse string in at last 5 passages.
+Driadi is a small library that implements [The tree data structure](https://en.wikipedia.org/wiki/Tree_(data_structure))
 
 ## Usage
-
+### Initialization
 ```ts
-import morse from "driadi";
+import Tree from "driadi";
 
-const encoded = morse.encode("What hath God wrought");
-const decoded = morse.decode(encoded);
+// creates a new empty Tree<string>
+const hazel = new Tree();
 
-console.log(encoded, dedcoded);
-// .-- .... .- -_.... .- - ...._--. --- -.._.-- .-. --- ..- --. .... -
-// what hath god wrought
+// creates a new empty Tree<number>
+const oak = new Tree<number>();
+
+// deep copies a tree
+const cypress: Tree = new Tree();
+const juniper: Tree = Tree.from(cypress);
+```
+#### Tree literals (works with Tree\<string\> only)
+Driadi uses a simple syntax to define trees:
+```antlr
+tree ::= node | tree "\n" node
+node ::= node-position " : " node-payload
+node-position ::= node-label node-label | node-label
+node-payload ::= string
+node-label ::= string
+string ::= char | string char+
+char ::= [A-Za-z0-9]
+```
+Or something like this, my BNF is a bit rusty, anyway, if you want to define a tree as a literal you can do it like this:
+```typescript
+const tree = Tree.treeLit`parent : this represent a parent node
+parent child : this represent a child node
+parent sibling : this represent a sibling node
+`;
+```
+or like this:
+```typescript
+const myTree = `parent : this represent a parent node
+parent child : this represent a child node
+parent sibling : this represent a sibling node
+`;
+const tree = Tree.parse(myTree);
+```
+or like this:
+```typescript
+const myTree = `parent : this represent a parent node
+parent child : this represent a child node
+parent sibling : this represent a sibling node
+`;
+const tree = new Tree();
+tree.load(myTree);
 ```
 
-## Notes
+Why so many methods? I was bored at home.
+## Methods
 
-- It is possible to encode/decode only alphanumeric signs (no punctuation).
-- Encoding algorithm is case-insensitive.
+### insert
+```typescript
+const juniper = { label: "juniper", payload: "coniferous trees and shrubs in the genus Juniperus" };
+const cypress = { label: "cypress", payload: "common name for various coniferous trees or shrubs" };
+
+const tree = new Tree();
+tree.insert(juniper); // adds a child node labeled juniper to root node
+tree.insert(cypress, juniper.label); // adds a node labeled cypress to juniper node
+```
+
+### remove
+```typescript
+const juniper = { label: "juniper", payload: "coniferous trees and shrubs in the genus Juniperus" };
+const cypress = { label: "cypress", payload: "common name for various coniferous trees or shrubs" };
+
+const tree = new Tree();
+tree.insert(juniper);
+tree.insert(cypress, juniper.label);
+
+const removed = tree.remove(junper.label); // returns remove node
+```

@@ -1,44 +1,44 @@
 import Tree, { INode } from "driadi";
 
-const morseTreeConfig = `E .
-T -
-E I .
-E A -
-T N .
-T M -
-I S .
-I U -
-A R .
-A W -
-N D .
-N K -
-M G .
-M O -
-S H .
-S V -
-U F .
-R L .
-W P .
-W J -
-D B .
-D X -
-K C .
-K Y -
-G Z .
-G Q -
-J 1 -
-V 3 -
-H 4 -
-H 5 .
-B 6 .
-Z 7 .
-O L1 .
-O L2 -
-U L3 -
-L1 8 .
-L2 9 .
-L2 0 -
-L3 2 -
+const morseTreeConfig = `E : .
+T : -
+E I : .
+E A : -
+T N : .
+T M : -
+I S : .
+I U : -
+A R : .
+A W : -
+N D : .
+N K : -
+M G : .
+M O : -
+S H : .
+S V : -
+U F : .
+R L : .
+W P : .
+W J : -
+D B : .
+D X : -
+K C : .
+K Y : -
+G Z : .
+G Q : -
+J 1 : -
+V 3 : -
+H 4 : -
+H 5 : .
+B 6 : .
+Z 7 : .
+O L1 : .
+O L2 : -
+U L3 : -
+L1 8 : .
+L2 9 : .
+L2 0 : -
+L3 2 : -
 `;
 
 type DotDash = "." | "-";

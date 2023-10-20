@@ -1,7 +1,7 @@
 {
   "name": "driadi",
   "version": "1.1.1",
-  "description": "A very simple Tree data type implementation",
+  "description": "A very simple Tree data structure implementation",
   "repository": {
     "type": "git",
     "url": "https://github.com/rollingflamingo/driadi"
