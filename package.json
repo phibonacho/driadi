@@ -1,6 +1,6 @@
 {
-  "name": "driadi-mono",
-  "version": "1.1.0",
+  "name": "driadi",
+  "version": "2.0.0",
   "description": "Morse decoder based on Huffman coding",
   "repository": {
     "type": "git",
