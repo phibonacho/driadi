@@ -1,4 +1,4 @@
-import Tree, { INode } from "driadi";
+import Tree, { INode } from "danae";
 
 const morseTreeConfig = `E : .
 T : -

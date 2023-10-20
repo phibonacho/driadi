@@ -1,6 +1,6 @@
 {
   "name": "hermes",
-  "version": "1.1.2",
+  "version": "1.0.0",
   "description": "Morse decoder based on Huffman coding",
   "repository": {
     "type": "git",
@@ -21,7 +21,7 @@
     "build": "tsup"
   },
   "dependencies": {
-    "driadi": "*"
+    "danae": "*"
   },
   "devDependencies": {
     "@babel/core": "^7.21.0",
@@ -38,7 +38,12 @@
     "tsup": "^7.1.0",
     "typescript": "^4.9.5"
   },
-  "keywords": ["morse", "huffman", "decoder", "encoder"],
+  "keywords": [
+    "morse",
+    "huffman",
+    "decoder",
+    "encoder"
+  ],
   "author": {
     "name": "Andrea Storace",
     "email": "info@andreastorace.it",

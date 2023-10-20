@@ -5,7 +5,7 @@ Driadi is a small library that implements [The tree data structure](https://en.w
 ## Usage
 ### Initialization
 ```ts
-import Tree from "driadi";
+import Tree from "danae";
 
 // creates a new empty Tree<string>
 const hazel = new Tree();
