@@ -54,7 +54,7 @@ importers:
             tsup: 7.1.0_6qtx7vkbdhwvdm4crzlegk4mvi
             typescript: 4.9.5
 
-    packages/dolos:
+    packages/driadi:
         specifiers:
             "@babel/core": ^7.21.0
             "@types/chai": ^4.3.4
