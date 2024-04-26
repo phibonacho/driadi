@@ -1,5 +1,5 @@
 {
-	"name": "dafne",
+	"name": "driadi",
 	"version": "1.0.0",
 	"description": "Morse decoder based on Huffman coding",
 	"repository": {
@@ -21,7 +21,7 @@
 		"build": "tsup"
 	},
 	"dependencies": {
-		"danae": "^1.0.0"
+		"dafne": "*"
 	},
 	"devDependencies": {
 		"@babel/core": "^7.21.0",

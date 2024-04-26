@@ -1,12 +1,12 @@
 {
-	"name": "danae",
+	"name": "dafne",
 	"version": "1.0.0",
 	"description": "A very simple Tree data structure implementation",
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/rollingflamingo/driadi/tree/main/packages/driadi"
+		"url": "https://github.com/rollingflamingo/driadi/tree/main/packages/dafne"
 	},
-	"homepage": "https://github.com/rollingflamingo/driadi/tree/main/packages/driadi",
+	"homepage": "https://github.com/rollingflamingo/driadi/tree/main/packages/dafne",
 	"main": "dist/index.js",
 	"browser": "dist/index.js",
 	"module": "dist/index.mjs",

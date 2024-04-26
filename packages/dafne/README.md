@@ -1,11 +1,11 @@
-# Danae
+# Dafne
 
-Danae is a small library that implements [The tree data structure](https://en.wikipedia.org/wiki/Tree_(data_structure))
+Dafne is a small library that implements [The tree data structure](https://en.wikipedia.org/wiki/Tree_(data_structure))
 
 ## Usage
 ### Initialization
 ```ts
-import Tree from "danae";
+import Tree from "dafne";
 
 // creates a new empty Tree<string>
 const hazel = new Tree();
