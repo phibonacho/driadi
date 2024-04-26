@@ -4,8 +4,9 @@
 /**/.npmrc
 
 .DS_Store
-lerna-deubg.log
+lerna-debug.log
 *.iml
 vcs.xml
 prettier.xml
 modules.xml
+.idea
