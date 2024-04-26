@@ -2,3 +2,10 @@
 /**/node_modules/
 /**/dist/
 /**/.npmrc
+
+.DS_Store
+lerna-deubg.log
+*.iml
+vcs.xml
+prettier.xml
+modules.xml
