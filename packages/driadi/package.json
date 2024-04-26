@@ -1,6 +1,6 @@
 {
 	"name": "driadi",
-	"version": "1.0.0",
+	"version": "2.0.0",
 	"description": "Morse decoder based on Huffman coding",
 	"repository": {
 		"type": "git",
@@ -21,7 +21,7 @@
 		"build": "tsup"
 	},
 	"dependencies": {
-		"dafne": "*"
+		"dafne": "^2.0.0"
 	},
 	"devDependencies": {
 		"@babel/core": "^7.21.0",
